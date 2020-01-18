@@ -1,0 +1,438 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $font
+	overflow-x: hidden
+	color: $text
+
+
+.container
+	max-width: 1280px
+	padding:
+		right: $gutter/2
+		left: $gutter/2
+	margin:
+		left: auto
+		right: auto
+
+// HEADER
+.header
+	margin-top: 108px
+	background: $accent
+.menu
+	font-size: 15px
+	line-height: 14px
+	font-weight: bold
+	position: relative
+	z-index: 100
+	background: $accent
+	ul
+		display: flex
+		justify-content: space-between
+		margin: 0
+		list-style-type: none
+		padding: 0
+	li
+		height: 60px
+		width: 25%
+		border-left: 1px solid #53C9FE
+		&:last-child
+			border-right: 1px solid #53C9FE
+	a
+		color: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 100%
+		transition: .3s all ease
+		&:hover
+			text-decoration: none
+			background: lighten($accent, 10)
+
+// MAIN
+.inner
+	background: #EEF9FC
+	height: 368px
+.promo
+	height: 263px
+	position: relative
+	&__text
+		max-width: 489px
+	&__title
+		.h1
+			font-size: 28px
+			font-weight: bold
+			color: $accent
+			line-height: 40px
+			padding-top: 73px
+	&__desc
+		font-size: 15px
+		line-height: 20px
+		padding-top: 10px
+	&__town
+		position: absolute
+		bottom: 0
+		right: 0
+	&__cloud-left
+		position: absolute
+		top: 28px
+		left: -55px
+	&__cloud-right
+		position: absolute
+		top: 55px
+		right: -92px
+	&__cloud-center-min
+		position: absolute
+		top: -10px
+		right: 300px
+	&__cloud-center-big
+		position: absolute
+		top: 13px
+		left: 454px
+	&__people
+		position: absolute
+		bottom: -22px
+		left: 517px
+	&__case
+		position: absolute
+		bottom: -1px
+		left: 696px
+	&__flower
+		position: absolute
+		bottom: -72px
+		right: -26px
+	&__geo
+		position: absolute
+		top: 42px
+		right: 411px
+	&__likes
+		position: absolute
+		top: 21px
+		right: 558px
+	&__tolk
+		position: absolute
+		top: 6px
+		left: 527px
+
+// FORM
+.form
+	height: 60px
+	border: 3px solid #0098DB
+	background: #FFFFFF
+	position: relative
+	z-index: 100
+	box-shadow: 0px 0px 10px rgba(83, 201, 254, 0.44)
+	border-radius: 3px
+	display: flex
+.hotel
+	max-width: 421px
+	width: 100%
+	border-right: 1px solid #D6D6D6
+	position: relative
+	font-size: 15px
+	padding-left: 44px	
+	position: relative
+	&:after
+		content: ''
+		background: url('../img/@2x/navigation.png') no-repeat
+		position: absolute
+		top: 14px
+		right: 10px
+		width: 24px
+		height: 24px
+	&:before
+		content: ''
+		background: url('../img/@2x/map-pin.png') no-repeat
+		position: absolute
+		top: 14px
+		left: 10px
+		width: 24px
+		height: 24px
+		z-index: 1
+	&__text
+		margin-top: 14px
+	&__block
+		position: absolute
+		top: -3px
+		left: -3px
+		width: 400px
+		height: 379px
+		background: #fff
+		border: 1px solid #0098DB
+		border-radius: 3px
+		display: none
+	&__input
+		border: 0
+		outline: 0
+		width: 100%
+		height: 60px
+		border-bottom: 1px solid #0098DB
+		padding-left: 44px
+	&__list
+		list-style-type: none
+		padding-left: 5px
+		height: 274px
+		overflow-y: scroll
+		li
+			height: 42px
+			display: flex
+			align-items: center
+			cursor: pointer
+			padding-left: 9px
+			&:hover
+				background: #F5F5F5
+	&__list.sale
+		li
+			display: none
+		.sale
+			display: flex
+.days
+	max-width: 292px
+	width: 100%
+	border-right: 1px solid #D6D6D6
+	position: relative
+	padding-left: 45px
+	display: flex
+	align-items: center
+	&:before
+		content: ''
+		background: url('../img/@2x/calendar.png') no-repeat
+		position: absolute
+		top: 14px
+		left: 10px
+		width: 24px
+		height: 24px
+		z-index: 1
+	input
+		border: 0
+		width: 100%
+	
+.rooms
+	max-width: 291px
+	width: 100%
+	position: relative
+	display: flex
+	align-items: center
+	padding-left: 45px
+	&:hover
+		.rooms__block
+			display: block
+	&:before
+		content: ''
+		background: url('../img/@2x/user-plus.png') no-repeat
+		position: absolute
+		top: 14px
+		left: 10px
+		width: 24px
+		height: 24px
+		z-index: 1
+	&__block
+		position: absolute
+		display: none
+		top: 65px
+		width: 292px
+		height: 194px
+		background: #fff
+		left: 0
+		border: 1px solid #0098DB
+		box-shadow: 0px 0px 25px rgba(0, 152, 219, 0.21)
+		&:before
+			content: ''
+			position: absolute
+			top: -12px
+			left: -1px
+			height: 17px
+			width: 101%
+			background: transparent
+		&:hover
+			display: block
+		.s-minus, .s-plus
+			cursor: pointer
+	&__item
+		display: flex
+		height: 66px
+		align-items: center
+		justify-content: space-between
+		font-size: 14px
+		font-weight: bold
+		padding-left: 18px
+		padding-right: 29px
+		border-bottom: 1px solid #E9E9E9
+		input
+			width: 42px
+			border: 0
+			font-size: 14px
+			font-weight: bold
+			color: #000
+			text-align: center
+	&__input
+		display: flex
+		justify-content: space-between
+	&__item-wrap
+		display: flex
+.btn
+	padding: 3px
+	.sub-btn
+		background: #FC6341
+		color: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 18px
+		height: 49px
+		width: 267px
+		border-radius: 3px
+		outline: 0!important
+		cursor: pointer
+		transition: .3s ease all
+		&:hover
+			color: #fff
+			background: darken(#FC6341, 10)
+
+// .SWITCH
+.switch_box
+	.switch_box
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  max-width: 200px
+  min-width: 200px
+  height: 200px
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-flex: 1
+  -ms-flex: 1
+  flex: 1
+  &__all
+  	font-weight: bold
+  &__sell
+  	font-weight: bold
+
+.box_1
+  background: #fff
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  width: 152px
+  height: 42px
+  margin-left: auto
+  margin-right: 37px
+  font-size: 13px
+  .active
+  	color: #0098DB
+
+input[type="checkbox"].switch_1
+  font-size: 16px
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  width: 3.5em
+  height: 1.5em
+  background: #fff
+  border-radius: 3em
+  position: relative
+  cursor: pointer
+  outline: none
+  -webkit-transition: all .2s ease-in-out
+  transition: all .2s ease-in-out
+  border: 1px solid #8DCEEB
+  margin: 0 15px
+
+  &:checked
+    background: #fff
+
+  &:after
+    position: absolute
+    content: ""
+    width: 1.5em
+    height: 1.5em
+    border-radius: 50%
+    background: #2BB5F2
+    -webkit-box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3)
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3)
+    -webkit-transform: scale(0.7)
+    transform: scale(0.7)
+    left: 0
+    -webkit-transition: all .2s ease-in-out
+    transition: all .2s ease-in-out
+
+  &:checked:after
+    left: calc(100% - 1.5em)
+
+.daterangepicker
+	top: 383px!important
+	left: 443px!important
+	width: 704px
+.daterangepicker .drp-calendar
+	max-width: 345px
+.daterangepicker::after, .daterangepicker.opensright::before
+	display: none!important
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td
+	width: 36px
+	height: 40px
+	min-width: 45px
+.daterangepicker .drp-calendar.left
+	padding: 14px 25px 14px 14px
+.daterangepicker .drp-calendar.right
+	padding: 14px 14px 14px 25px
+.daterangepicker .calendar-table th
+	font-size: 15px
+.daterangepicker .calendar-table td
+	font-size: 	14px!important
+.drp-buttons
+	display: none!important
+// RESULT
+.table-condensed thead
+	border-bottom: 2px solid #CCCCCC
+.daterangepicker td.start-date
+	border-radius: 100%
+	background: #0098DB
+.daterangepicker td.start-date.end-date
+	border-radius: 100%
+.daterangepicker td.end-date
+	border-radius: 100%
+	background: #0098DB
+.daterangepicker .calendar-table .prev span
+	background: url('../img/@2x/left.png') no-repeat
+	border: none
+	width: 36px
+	height: 36px
+	transform: rotate(0)
+.daterangepicker .calendar-table .next span
+	background: url('../img/@2x/right.png') no-repeat
+	border: none
+	width: 36px
+	height: 36px
+	transform: rotate(0)
+.prev.available, .next.available
+	&:hover
+		background: #fff!important
+.result
+	padding-top: 10px
+	height: 1000px
+	h3
+		color: $accent

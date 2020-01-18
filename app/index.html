@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Travek</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+	<script type="text/javascript" src="js/daterangepicker.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<nav class="menu">
+				<ul>
+					<li><a href="">О нашей компании</a></li>
+					<li><a href="">Выбрать отель</a></li>
+					<li><a href="">Инвестировать в отель</a></li>
+					<li><a href="">+  Присоединить отель</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class="main">
+		<div class="inner">
+			<div class="container">
+				<div class="promo">
+					<div class="promo__text">
+						<div class="promo__title">
+							<h1 class="h1">Забронируйте уникальное жилье быстро и просто</h1>
+						</div>
+						<div class="promo__desc">
+							Лучший способ арендовать квартиру
+						</div>
+					</div>
+					<div class="promo__cloud-left">
+						<img src="img/@2x/cloud-big.png" alt="">
+					</div>
+					<div class="promo__cloud-right">
+						<img src="img/@2x/cloud-min.png" alt="">
+					</div>
+					<div class="promo__cloud-center-min">
+						<img src="img/@2x/cloud-min.png" alt="">
+					</div>
+					<div class="promo__cloud-center-big">
+						<img src="img/@2x/cloud-big.png" alt="">
+					</div>
+					<div class="promo__town">
+						<img src="img/@2x/town.png" alt="">
+					</div>
+					<div class="promo__people">
+						<img src="img/@2x/people.png" alt="">
+					</div>
+					<div class="promo__case">
+						<img src="img/@2x/case.png" alt="">
+					</div>
+					<div class="promo__flower">
+						<img src="img/@2x/flower.png" alt="">
+					</div>
+					<div class="promo__geo">
+						<img src="img/@2x/geo.png" alt="">
+					</div>
+					<div class="promo__likes">
+						<img src="img/@2x/likes.png" alt="">
+					</div>
+					<div class="promo__tolk">
+						<img src="img/@2x/tolk.png" alt="">
+					</div>
+				</div>
+				<div class="form">
+					<div class="hotel">
+						<div class="hotel__text">Отель</div>
+						<div class="hotel__block">
+							<input class="hotel__input" id="hotel-input" type="text" value="Назван...">
+							<div class="switch_box box_1">
+								<div class="switch_box__all active">
+									Все
+								</div>
+								<input type="checkbox" class="switch_1">
+								<div class="switch_box__sell">
+									Акции
+								</div>
+							</div>
+							<ul class="hotel__list">
+								<li class="sale">Отел Петербург</li>
+								<li class="sale">Отель Москва</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+								<li>Название Отеля</li>
+							</ul>
+						</div>
+					</div>
+					<div class="days"><input id="daysInput" type="text" name="dates"></div>
+					<div class="rooms">
+						<span id="numUser">2</span> <span id="numUserText">&nbsp;взрослых</span>&nbsp;-&nbsp;<span id="numRooms">один</span> <span id="numRoomsText">&nbsp;номер</span>
+						<div class="rooms__block">
+							<div class="rooms__item">
+								Номера
+								<div class="rooms__item-wrap">
+									<div class="s-minus"><img src="img/@2x/minus.png" alt=""></div>
+									<input id="room-input" value="2" type="text">
+									<div class="s-plus"><img src="img/@2x/plus.png" alt=""></div>
+								</div>			
+							</div>
+
+
+							<div class="rooms__item">
+								Взрослых
+								<div class="rooms__item-wrap">
+									<div class="s-minus"><img src="img/@2x/minus.png" alt=""></div>
+									<input id="user-input" value="2" type="text">
+									<div class="s-plus"><img src="img/@2x/plus.png" alt=""></div>
+								</div>			
+							</div>
+
+
+							<div class="rooms__item">
+								Детей
+								<div class="rooms__item-wrap">
+									<div class="s-minus"><img src="img/@2x/minus.png" alt=""></div>
+									<input id="child-input" value="2" type="text">
+									<div class="s-plus"><img src="img/@2x/plus.png" alt=""></div>
+								</div>			
+							</div>
+
+						</div>
+					</div>
+					<div class="btn"><a class="sub-btn" id="btn-submit"> Начать поиск</button></div>
+					</div>
+				</div>
+			</div>
+			<div class="result">
+				<div class="container">
+					<div class="result__text">
+				
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="js/scripts.min.js"></script>
+
+	</body>
+	</html>
